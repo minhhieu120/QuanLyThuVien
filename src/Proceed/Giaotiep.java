@@ -1,15 +1,14 @@
 /*
 interface dùng để trao đổi dữ liệu,thông điệp giữa các class
 ở đây, tạo interface để các thuộc tính của các lớp đối tượng có thể sử dụng được ở jframe
- */
+*/
 package Proceed;
 
 /**
  *
- *
+ * 
  */
 public interface Giaotiep {
-
     public Object toObject();
 }
 /*Vấn đề gặp phải là không thể đọc file và liên kết các thuộc tính trong các lớp khác nhau được chứa
