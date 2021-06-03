@@ -12,26 +12,25 @@ import java.util.Scanner;
 /**
  *
  */
-public class docgia implements Serializable,Giaotiep{
+public class docgia implements Serializable, Giaotiep {
+
     private int madg;
     private String tendg;
     private String diachi;
     private int sdtdg;
-     private String emaildg;
-   /* public void chaythu (){
-        Scanner input = new Scanner(System.in);
-         System.out.println("nhap ma doc gia");
-        madg= input.nextInt();
-        input.nextLine();
-        System.out.print("nhap ten doc gia");
-        tendg = input.nextLine();
-        input.nextLine();
-        System.out.print("nhap dia chi");
-        diachi = input.nextLine();
-        System.out.print("nhap so dien thoai");
-        sdtdg = input.nextInt();
+    private String emaildg;
+
+    public docgia() {
     }
-*/
+
+    public docgia(int madg, String tendg, String diachi, int sdtdg, String emaildg) {
+        this.madg = madg;
+        this.tendg = tendg;
+        this.diachi = diachi;
+        this.sdtdg = sdtdg;
+        this.emaildg = emaildg;
+    }
+    
     public int getMadg() {
         return madg;
     }
@@ -75,7 +74,7 @@ public class docgia implements Serializable,Giaotiep{
     @Override
     public Object toObject() {
         return new Object[]{
-            this.getMadg(),this.getTendg(),this.getDiachi(), this.getEmaildg(), this.getSdtdg()
+            this.getMadg(), this.getTendg(), this.getDiachi(), this.getEmaildg(), this.getSdtdg()
         };
-
-    }}
+    }
+}

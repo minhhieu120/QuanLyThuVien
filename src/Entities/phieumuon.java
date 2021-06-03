@@ -10,13 +10,24 @@ import java.io.Serializable;
 
 /**
  *
- * 
+ *
  */
-public class phieumuon implements Serializable,Giaotiep{
-     private int madausach;
+public class phieumuon implements Serializable, Giaotiep {
+
+    private int madausach;
     private int maphieumuon;
     private int madocgia;
-     private String ngaymuon;
+    private String ngaymuon;
+
+    public phieumuon() {
+    }
+
+    public phieumuon(int madausach, int maphieumuon, int madocgia, String ngaymuon) {
+        this.madausach = madausach;
+        this.maphieumuon = maphieumuon;
+        this.madocgia = madocgia;
+        this.ngaymuon = ngaymuon;
+    }
 
     public int getMadausach() {
         return madausach;
@@ -52,9 +63,9 @@ public class phieumuon implements Serializable,Giaotiep{
 
     @Override
     public Object toObject() {
-         return new Object[]{
-            this.getMadausach(),this.getMaphieumuon(), this.getMadocgia(), this.getNgaymuon()
+        return new Object[]{
+            this.getMadausach(), this.getMaphieumuon(), this.getMadocgia(), this.getNgaymuon()
         };
     }
-     
+
 }
